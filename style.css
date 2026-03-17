@@ -1,0 +1,603 @@
+
+/* THIS IS FOR THE FONT STYLING THE ENTIRE WEBSITE*/
+
+@font-face {
+    font-family: 'Tiny5';
+    src:url('fonts/subset-Tiny5-Regular.woff2') format('woff2'),
+        url('fonts/subset-Tiny5-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'pix Chicago';
+    src:url('fonts/subset-pixChicago.woff2') format('woff2'),
+        url('fonts/subset-pixChicago.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src:url('fonts/subset-SpaceGrotesk-SemiBold.woff2') format('woff2'),
+        url('fonts/subset-SpaceGrotesk-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src:url('fonts/subset-SpaceGrotesk-Regular.woff2') format('woff2'),
+        url('fonts/subset-SpaceGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src:url('fonts/subset-SpaceGrotesk-Medium.woff2') format('woff2'),
+        url('fonts/subset-SpaceGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src:url('fonts/subset-SpaceGrotesk-Light.woff2') format('woff2'),
+        url('fonts/subset-SpaceGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src:url('fonts/subset-SpaceGrotesk-Bold.woff2') format('woff2'),
+        url('fonts/subset-SpaceGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: optional;
+}
+
+
+/* THIS IS FOR THE NAV BAR STYLING*/
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: 'Tiny5', ui-sans-serif, system-ui, Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(98, 129, 232);
+    padding: 0 10px;
+}
+
+nav ul {
+    display: flex; 
+    list-style: none;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a{
+    display: block;
+    color: rgb(238, 237, 243);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #0422b6;
+}
+
+.search-bar {
+    padding: 10px 15px;
+    border: 2px solid #aaa;
+    font-family: monospace;
+    width: 200px;
+    max-width: 100%;
+}
+
+#noResults {
+    display: none;
+    font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10%;
+    color:#0422b6
+}
+
+/* This is for making the navbar responsive*/
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0 0 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* THIS IS FOR HOMEPAGE STYLING*/
+
+/* This is for title and subhead*/
+
+.titlecard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.titlecard img {
+    position: absolute;
+    width: 20%;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+}
+
+.subhead {
+  font-size: clamp(2rem, 2.5vw, 2rem);
+  margin-top: 20px;
+  opacity: 0.8;
+  max-width: 600px;
+  text-decoration: none;
+  color:rgb(103, 103, 103);
+  font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+}
+
+.subhead:hover {
+  color:#0422b6;
+}
+
+/* This is for image placement*/
+
+/* This is for TOP image placement*/
+
+.cassette-index {
+    position: absolute;
+    bottom: 60%;
+    left: 10%;
+    transform: rotate(-10deg);
+}
+
+.polaroid-index {
+    position: absolute;
+    bottom: 55%;
+    right: 10%;
+    transform: rotate(10deg);
+}
+
+.vinyl-index {
+    position: absolute;
+    bottom: 60%;
+    left: 40%;
+    transform: rotate(-4deg);
+}
+
+/* This is for BOTTOM image placement*/
+
+.camera-index {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    transform: rotate(8deg);
+}
+
+.cd-index {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(-6deg);
+}
+
+/* This is for image animations*/
+
+.anim {
+    opacity: 0;
+    animation: moveup 1s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+    }
+}
+
+/* This is for image responsiveness*/
+
+@media (max-width: 600px) {
+    .titlecard img {
+        width: 35%;
+        position: absolute;
+    }
+
+    .cassette-index {
+        bottom: 35%;
+        left: 5%;
+        transform: rotate(-8deg);
+    }
+
+    .polaroid-index {
+        bottom: 35%;
+        right: 5%;
+        transform: rotate(8deg);
+    }
+
+    .vinyl-index {
+        bottom:35%;
+        left: 35%;
+        transform: rotate(-2deg);
+    }
+
+    .camera-index {
+        top: 130%;
+        right: 5%;
+        transform: rotate(6deg);
+    }
+
+    .cd-index {
+        top: 130%;
+        left: 5%;
+        transform: rotate(-4deg);
+    }
+}
+
+/* THIS IS FOR INPUT PAGE STYLING*/
+
+/* This is for the styling of the header/title*/
+
+.input-header {
+    font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* This is for the styling of the card previews*/
+
+.input-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.input-cards {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border: 4px solid black;
+    min-height: 160px;
+    background-color: rgba(191, 191, 191, 1);
+    cursor: pointer;
+} 
+
+.input-card-image {
+    width: 150px;
+    display: block;
+    border: 3px solid black;
+}
+
+.input-card-content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+}
+
+.input-cards:hover {
+    transition: background-color 2s;
+    transform: translate(-4px, -4px);
+    background-color: rgb(143, 162, 231);
+}
+
+/* This is for the styling of the card modals and opening of cards*/
+
+.card-modal {
+    background: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    z-index: 1000;
+    padding: clamp(16px, 4vw, 30px);
+}
+
+.modal-content {
+    background: #aaa;
+    border: 4px solid black;
+    padding: clamp(40px, 4vw, 40px);
+    width: min(900px, 90vw);
+    display: flex;
+    gap: 30px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 3px solid black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* This is for preview cards and modals responsive*/
+
+@media (max-width: 600px) {
+    .input-card-grid {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .modal-image {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width:400px) {
+    .input-card-image {
+        display: none;
+    }
+    .input-card-content {
+        margin-left: 0px;
+    }
+}
+
+/* THIS IS FOR OUTPUT PAGE STYLING*/
+
+/* This is for the styling of the header/title*/
+
+.output-header {
+    font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* This is for the styling of the card previews*/
+
+.output-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding: 40px;
+}
+
+.output-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 4px solid black;
+    min-height: 160px;
+    background-color: rgba(191, 191, 191, 1);
+    cursor: pointer;
+    overflow-y: auto;
+
+} 
+
+.output-card-image {
+    width: 85%;
+    margin-top: auto;
+    display: block;
+    align-self: center;
+}
+
+.output-card-content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+    align-items: center;
+}
+
+.output-cards:hover {
+    transition: background-color 2s;
+    transform: translate(-4px, -4px);
+    background-color: rgb(143, 162, 231);
+}
+
+/* This is for the styling of the card modals and opening of cards*/
+
+.output-page .card-modal {
+    background: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    z-index: 1000;
+}
+
+.output-page .modal-content {
+    background: #aaa;
+    border: 4px solid black;
+    padding: clamp(40px, 4vw, 40px);
+    width: min(700px, 90vw);
+    max-width: 100%;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    flex-direction: column;
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+}
+
+.output-page .modal-video {
+    width: 80%;
+    max-width: 600px;
+    margin-top: auto;
+    align-self: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* This is for preview cards and modals responsive*/
+
+@media (max-width: 600px) {
+    .output-card-grid {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .output-page .modal-content {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .output-page .modal-video {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width:400px) {
+    .output-card-image {
+        display: none;
+    }
+    .output-card-content {
+        margin: 0px;
+}
+}
+    
+/* THIS IS FOR HISTORY/POPULARITY PAGE STYLING*/
+
+/* This is for the styling of the header/title*/
+
+.history-header, .popular-header {
+    font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* This is for the styling of the body type*/
+
+.history-body, .popular-body {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+
+}
+
+/* This is for making the header and body type responsive*/
+
+@media (max-width: 600px) {
+    .history-header, .popular-header {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .history-body, .popular-body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* THIS IS FOR ABOUT PAGE STYLING*/
+
+/* This is for the styling of the header/title*/
+
+.about-website-header {
+    font-family: 'pix Chicago', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+/* This is for the styling of the body type*/
+
+.about-website-body {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.citations-body {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* This is for making the header and body type responsive*/
+
+@media (max-width: 600px) {
+    .about-website-header {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .about-website-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .citations-body {
+        display: flex;
+        flex-direction: column;
+    }
+}
